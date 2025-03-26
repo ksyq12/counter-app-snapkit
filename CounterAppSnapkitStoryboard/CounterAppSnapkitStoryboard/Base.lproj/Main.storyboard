@@ -35,12 +35,15 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="감소"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="minusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1T6-TS-Emi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPu-xi-8Af">
                                 <rect key="frame" x="268.66666666666669" y="411" width="80" height="30"/>
@@ -51,25 +54,52 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="추가"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="plusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LfP-xy-Abm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oe7-8M-q27">
+                                <rect key="frame" x="156.66666666666666" y="553" width="80" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="B7E-O6-ytM"/>
+                                    <constraint firstAttribute="height" constant="30" id="yXM-G7-OCG"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="RESET"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pdB-e1-yLv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7vW-aw-1xL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Qn-YF-cTX"/>
+                            <constraint firstItem="Oe7-8M-q27" firstAttribute="top" secondItem="7vW-aw-1xL" secondAttribute="bottom" constant="100" id="56Z-O7-0or"/>
                             <constraint firstItem="qPu-xi-8Af" firstAttribute="leading" secondItem="7vW-aw-1xL" secondAttribute="trailing" constant="32" id="8wJ-S2-pzI"/>
+                            <constraint firstItem="Oe7-8M-q27" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I55-jK-qxC"/>
                             <constraint firstItem="7vW-aw-1xL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bD9-Tf-7x1"/>
                             <constraint firstItem="99b-cc-BB4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gmJ-ES-tMe"/>
                             <constraint firstItem="qPu-xi-8Af" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vNO-g2-ulV"/>
                             <constraint firstItem="7vW-aw-1xL" firstAttribute="leading" secondItem="99b-cc-BB4" secondAttribute="trailing" constant="32" id="yIt-Bd-L56"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numberLabel" destination="7vW-aw-1xL" id="EZu-wg-G7i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,6 +109,9 @@
     <resources>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
