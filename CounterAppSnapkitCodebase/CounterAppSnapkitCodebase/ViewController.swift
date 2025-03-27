@@ -90,15 +90,18 @@ class ViewController: UIViewController {
     }
     
     @objc func plusButtonTapped() {
-        
+        number += 1
+        numberLabel.text = "\(number)"
     }
     
     @objc func minusButtonTapped() {
-        
+        number -= 1
+        numberLabel.text = "\(number)"
     }
     
     @objc func resetButtonTapped() {
-        
+        number = 0
+        numberLabel.text = "\(number)"
     }
 
 }
